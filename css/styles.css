@@ -13,8 +13,10 @@ body {
 .wrapper{
   width: 100vw;
   height: 100vh;
-background-color:  #c4dfe6;
-  color: #2c7873;
+background-color:  #5475c7;
+
+  color: #785f2c;
+  
 }
 .navbar{
   display: flex;
@@ -26,7 +28,7 @@ background-color:  #c4dfe6;
   color:#fff;
 }
 .brand span {
-  color:  #2c7873;
+  color:  #785f2c;
 }
 .menu{
   display: flex;
@@ -43,7 +45,7 @@ text-decoration: none;
 padding: 10px 20px;
 }
 .menu .activa{
-  color: #2c7873;
+  color: #785f2c;
 
 }
 .menu a:hover{
@@ -62,22 +64,25 @@ display: none;
   display: grid;
 grid-template-columns: repeat(2,1fr);
 align-items: center;
+background-color: #5475c7;
+padding: 2rem;
+
 }
 .main img{
  
   
-  border: 7px solid  #2c7873;
+  border: 7px solid  #785f2c;
   width: 350px;
   height: 520px;
-  z-index: 1;
-  
-}
+
+} 
+
 h1 {
   font-size:clamp (4vw, 1.5em, 3em);
  
 }
 span {
-  color:#2c7873;
+  color:#785f2c;
 }
 .Dowload_cv {
 padding: 10px 20px;
@@ -292,15 +297,43 @@ font-size: 3em;
     font-size: 1.5em;}
 
     @media screen  and (max-width: 800px) {
+      .menu{
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left 0;
+        height: 100vh;
+        background-color: #56c1ba;
+        z-index: 1;
+        transform: translateX(-110%);
+        transition: all .5s ease-in-out;
+      }
+      .menu li{
+        margin: 2em ;
+      }
+      .toggle_menu{
+        display: block;
+      }
+      .fa-bars {
+        font-size: 1.5em;
+        margin-top:-.2em ;
+      }
+      .toggle_menu .fa-close {
+        font-size: 1.5em;
+        display:none;
+      }
       .main{ 
         display: flex;
         flex-direction: column-reverse;
        }
        
        .main img{
-        width: min(70%, 350px);
-        height: auto; 
-       }.info-content{
+        width: min(50%, 250px);
+        height: auto;
+      ;
+       }
+       .info-content{
         display: flex;
         justify-content:center;
         flex-direction: column;
@@ -309,6 +342,14 @@ font-size: 3em;
        
        .info-content .sotial-network, .content_sub {
         display: block;
+       }
+       .info-content .sotial-network{
+        display: flex;
+        justify-content:space-evenly;
+       margin: 0;
+       }
+       .Dowload_cv{
+        display: none;
        }
        .info-content_p{
         display: none;
